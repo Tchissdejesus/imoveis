@@ -1,0 +1,247 @@
+<span style="font-family: verdana, geneva, sans-serif;"><!DOCTYPE html>
+    <html lang="pt">
+    <head>
+      <meta charset="UTF-8" />
+      <title>Casa eficiente </title>
+      <link rel="stylesheet" href="style.css" />
+      <!-- Font Awesome Cdn Link -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    </head>
+    <body>
+      <div class="container">
+        <nav>
+          <ul>
+            <li><a href="Adm_actualizar.html" class="logo">
+              <img src="IMG/adm.jpg">
+              <span class="nav-item">Perfil</span>
+            </a></li>
+            <li><a href="Adm.html">
+              <i class="fas fa-user"></i>
+              <span class="nav-item">Admin</span>
+            </a></li>
+            <li><a href="Adm_cliente.html">
+              <i class="fas fa-users"></i>
+              <span class="nav-item">Clientes</span>
+            </a></li>
+            <li><a href="Adm_historico.html">
+              <i class="fas fa-database"></i>
+              <span class="nav-item">Histórico</span>
+            </a></li>
+            <li><a href="Adm_feedback.html">
+              <i class="fas fa-chart-bar"></i>
+              <span class="nav-item">FeedBack</span>
+            </a></li>
+            <li><a href="Adm_manutencao.html">
+              <i class="fas fa-user-cog "></i>
+              <span class="nav-item">Equipe Manutenção </span>
+            </a></li>
+    
+            <li><a href="#" class="logout">
+              <i class="fas fa-sign-out-alt"></i>
+              <span class="nav-item">Treminar sessão</span>
+            </a></li>
+          </ul>
+        </nav>
+    
+    
+        <section class="main">
+          <div class="main-top">
+            <h1>Perfil Administrador(a)</h1>
+            <i class="fas fa-user-cog"></i>
+          </div>
+          <div class="users">
+            <div class="card">
+              <img src="IMG/perfl1.jpeg">
+              <h4>Sergio Almeida </h4>
+              <p>Corrector </p>
+              <div class="per">
+                <table>
+                  <tr>
+                    <td><span>Nº Casas</span></td>
+                    <td><span>Telefone</span></td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>#798</td>
+                  </tr>
+                </table>
+              </div>
+              <button class="redirect-button" onclick="redirectToPage()">Perfil</button>
+              <!-- script para botaõ funcionar  -->
+              <script>
+                function redirectToPage(){
+                  window.location.href="Adm_detalhes_corrector.html"
+                }
+              </script>
+            </div>
+            <div class="card">
+              <img src="IMG/perfil2.jpg">
+              <h4>Tchiss Bernardo</h4>
+              <p>Correctora Profissional </p>
+              <div class="per">
+                <table>
+                  <tr>
+                    <td><span>Nº Casas</span></td>
+                    <td><span> Telefone</span></td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>#333</td>
+                  </tr>
+                </table>
+              </div>
+              <button class="redirect-button" onclick="redirectToPage()">Perfil</button>
+              <!-- script para botaõ funcionar  -->
+              <script>
+                function redirectToPage(){
+                  window.location.href="Adm_detalhes_corrector.html"
+                }
+              </script>
+            </div>
+            <div class="card">
+              <img src="IMG/perfil0.jpg">
+              <h4>André Yanga </h4>
+              <p> Corrector </p>
+              <div class="per">
+                <table>
+                  <tr>
+                    <td><span>Nº Casas</span></td>
+                    <td><span> Telefone</span></td>
+                  </tr>
+                  <tr>
+                    <td>05</td>
+                    <td>#4565</td>
+                  </tr>
+                </table>
+              </div>
+              <button class="redirect-button" onclick="redirectToPage1()">Perfil</button>
+                  <!-- script para botaõ funcionar  -->
+                  <script>
+                    function redirectToPage1(){
+                      window.location.href="Adm_detalhes_corrector.html"
+                    }
+                  </script>
+            </div>
+            <div class="card">
+              <img src="IMG/perfil2.jpg">
+              <h4>Cássia Pedro</h4>
+              <p>Correctora</p>
+              <div class="per">
+                <table>
+                  <tr>
+                    <td><span>Nº Casas</span></td>
+                    <td><span>Telefone</span></td>
+                  </tr>
+                  <tr>
+                    <td>0</td>
+                    <td>#001</td>
+                  </tr>
+                </table>
+              </div>
+              <button class="redirect-button" onclick="redirectToPage1()">Perfil</button>
+              <!-- script para botaõ funcionar  -->
+              <script>
+                function redirectToPage1(){
+                  window.location.href="Adm_detalhes_corrector.html"
+                }
+              </script>
+              
+            </div>
+          </div>
+    
+          <section class="attendance">
+            <div class="attendance-list">
+              <h1>Listas dos Imóveis </h1>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>ID CASA </th>
+                    <th>Tipologia </th>
+                    <th>Localização</th>
+                    <th>Ano de construção</th>
+                    <th>Preço</th>
+                    <th>Descrisão dos Imóveis </th>
+                    <th>Imagens </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="active">01</td>
+                    <td>T4 </td>
+                    <td>Cazenga</td>
+                    <td>2002</td>
+                    <td>50.000.000</td>
+                    <td>Disponível</td>
+                    <td>
+                      <button class="redirect-button" onclick="redirectToPage1()">Ver Detalhes </button>
+                      <!-- script para botaõ funcionar  -->
+                      <script>
+                        function redirectToPage1(){
+                          window.location.href="Adm_detalhes_casa.html"
+                        }
+                      </script>
+                    </td>
+                    
+                  </tr>
+                  <tr class="active">
+                    <td>02</td>
+                    <td>T4 </td>
+                    <td>Cazenga</td>
+                    <td>2002</td>
+                    <td>50.000.000</td>
+                    <td>Disponível</td>
+                    <td>
+                      <button class="redirect-button" onclick="redirectToPage1()">Ver Detalhes </button>
+              <!-- script para botaõ funcionar  -->
+              <script>
+                function redirectToPage1(){
+                  window.location.href="Adm_detalhes_casa.html"
+                }
+              </script>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="active">03</td>
+                    <td>T5 </td>
+                    <td>Sambizanga</td>
+                    <td>2000</td>
+                    <td>1.000.000</td>
+                    <td>Disponível</td>
+                    <td>
+                      <button class="redirect-button" onclick="redirectToPage1()">Ver Detalhes </button>
+                      <!-- script para botaõ funcionar  -->
+                      <script>
+                        function redirectToPage1(){
+                          window.location.href="Adm_detalhes_casa.html"
+                        }
+                      </script>   
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="active" >04</td>
+                    <td>T4 </td>
+                    <td>Cazenga</td>
+                    <td>2002</td>
+                    <td>56.000</td>
+                    <td>Indispónivel</td>
+                    <td>
+                      <button class="redirect-button" onclick="redirectToPage1()">Ver Detalhes </button>
+                      <!-- script para botaõ funcionar  -->
+                      <script>
+                        function redirectToPage1(){
+                          window.location.href="Adm_detalhes_casa.html"
+                        }
+                      </script>
+                    </td>
+                  </tr>
+                 
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </section>
+      </div>
+    
+    </body>
+    </html>
+    </span>
