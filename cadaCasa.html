@@ -1,0 +1,141 @@
+<span style="font-family: verdana, geneva, sans-serif;"><!DOCTYPE html>
+    <html lang="pt">
+    <head>
+      <meta charset="UTF-8" />
+      <title>Casa eficiente </title>
+      <link rel="stylesheet" href="cadaCada.css" />
+      <!-- Font Awesome Cdn Link -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    </head>
+    <body>
+        <header>
+            <nav class="navegation">
+              <a href="index.html"><img
+                  src="IMG/logo.png"
+                  alt="logo do SGI"
+                  class="logo"
+              /></a>
+              <ul>
+                <li><a href="#">Compar</a></li>
+                <li><a href="#">Alugar</a></li>
+                <li><a href="#">Imóvel Novo</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="login.html"><p class="entrar">Entrar</p></a></li>
+              </ul>
+            </nav>
+          </header>
+          <section class="site1">
+                <img class="img1" src="IMG/site1.jpg" alt="">
+                <img class="img2" src="IMG/site1.jpg" alt="">
+                <img class="img3" src="IMG/site1.jpg" alt="">
+          </section>
+
+          
+
+          <div class="descricao">
+            <div class="desc_simples">
+                <p class="p1">Apartamento · 137m² · 2 Quartos · 2 Vagas</p>
+                <p class="p2">Aluguel R$ 7.500</p>
+                <p class="p3">Avenida Manoel Ribas 4716, Santa Maria, Luanda</p>
+            </div>
+            <p class="descricao_casa">
+                Vista linda, cobertura totalmente mobiliada.
+                Com uma vista que vai deixar os seus dias mais leve e tranquilo. 
+                Essa cobertura está disponível para locação. Excelente localização e
+                 estrutura de condomínio.
+            </p>
+
+          </div>
+
+        
+          
+            <div class="comentario">
+                <p>Deixa o seu feedback</p>
+                <div class="search-bar">
+                    <textarea  type="text" id="inputfilder" placeholder="Escreva seu comentario"></textarea>
+                </div>
+                <a href="#"><p class="Enviar">Enviar</p></a>
+            </div>
+
+            <div class="contactar">
+                <p>Contacte o Corretor</p>
+                    <input type="text" id="email" placeholder="Nome">
+                    <input type="text" id="email" placeholder="Email">
+                    <input type="text" id="telefone" placeholder="Telefone">
+                    <input type="text" id="mensagen" placeholder="Mensagem">
+
+                    <button type="submit" id="Entrar" class="contato">Contactar <i class="fas fa-envelope"></i></button>
+                    <button type="submit" id="Entrar" class="what">Contactar via Whats <i class="fab fa-whatsapp"></i></button>
+            </div>
+
+          <div>
+            <a href="#"><img
+                src="IMG/logo.png"
+                alt="logo do SGI"
+                class="logo"
+            /></a>
+        </div>
+         
+            <section class="final">
+
+                <div class="SGI">
+                  <h1>SGI</h1>
+                  <ul>
+                    <li><a href="#">Buscar imóveis</a></li>
+                    <li><a href="#">Anunciar</a></li>
+                    <li><a href="#">Parceiros</a></li>
+                    <li><a href="#">Blog Só Corretor</a></li>
+                    <li><a href="#">Central de Ajuda</a></li>
+                  </ul>
+                </div>
+                <div class="Anunciantes">
+                  <h1>Anunciantes</h1>
+                  <ul>
+                    <li><a href="#">Imobiliárias</a></li>
+                    <li><a href="#">Corretores</a></li>
+                    <li><a href="#">Construtoras</a></li>
+                  </ul>
+                </div>
+                <div class="pais">
+                  <h1>Países</h1>
+                  <ul>
+                  <li><a href="#">Angola: Luanda</a></li>
+                  
+                </ul>
+                </div>
+
+                <div class="Siga-nos">
+                    <h1>Siga-nos</h1>
+                    <div class="social">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-instagram-square"></i>
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                  </div>
+              </section>
+
+    <script>
+        let select = document.getElementById("select");
+        let list = document.getElementById("list");
+
+        let selectText = document.getElementById("selectText");
+        let options = document.getElementsByClassName("options");
+
+
+
+        
+        select.onclick = function(){
+            list.classList.toggle("open");
+        }
+
+        for(options of options){
+            options.onclick = function(){
+                selectText.innerHTML = this.innerHTML;
+               
+            }
+        }
+
+    </script>      
+    </body>
+    </html>
+</span>

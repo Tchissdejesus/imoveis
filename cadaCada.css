@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+
+  }
+
+  body {
+    background: #fff;
+  }
+
+  header {
+    position: absolute;
+    position: fixed;
+    padding: 20px, 70px;
+    background: #3568A0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .navegation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navegation .logo {
+    width: 100px;
+    margin: 10px;
+    margin-left: 40px;
+  }
+  .navegation ul {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin: 10px;
+    margin-right: 40px;
+  }
+  .navegation ul li a{
+    color: #fff;
+    font-weight: 600;
+    padding-bottom: 4px;
+    transition: all 0.5s ease-in-out;
+  }
+  .navegation ul li a:hover {
+    color: #e8e6e5b9;
+    border-bottom: 1px solid #e8e6e5b9;
+  }
+  .navegation ul li .entrar{
+    border: 1px solid #FF5500;
+    padding: 6px;
+    background: #FF5500;
+    border-radius: 4px;
+ 
+ }
+ .site1{
+   position: relative;
+ }
+ .site1 .img1{
+    width: 50%;
+    height: 92%;
+ }
+ .site1 .img2{
+    width: 50%;
+    height: 40%;
+
+    margin-left: 650px;
+    margin-top: -477px;
+ }
+ .site1 .img3{
+    width: 50%;
+    height: 41%;
+
+    margin-left: 650px;
+    margin-top: -240px;
+ }
+
+ .comentario{
+    margin-top: 400px;
+    margin-left: -250px;
+ }
+
+ .descricao_casa {
+    white-space: pre-line;
+    margin-left: 30px;
+    margin-top: 20px;
+    padding: -100px;
+
+ }
+ .desc_simples .p1{
+    font-size: 14px;
+    color: #999;
+ }
+ .desc_simples .p2{
+    font-size: 25px;
+    color: black;
+    font-weight: bold;
+ }
+ .desc_simples .p1{
+    font-size: 20px;
+    color: black;
+ }
+
+.desc_simples{
+    margin-left: 30px;
+    margin-top: 10px;
+    padding: -100px;
+
+}
+ .contactar{
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 30%;
+    padding: 20px;
+    margin-left: 880px;
+    margin-top: -600px;
+ }
+.contactar p{
+
+   color: black;
+   padding: 10px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+
+.contactar input{
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    box-sizing: border-box; /* Incluir bordas no cálculo da largura */
+}
+.contactar .contato{
+   background-color:  #FF5500;  
+   background-color:  #FF5500;;; /* Cor azul padrão */
+   color: #fff;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 3px;
+   cursor: pointer;
+    margin-left: 20px;
+   margin-top: 15px;
+   width: 300px;
+   font-size: 15px;
+}
+.contactar .what{
+    background-color:  #28a745;  
+   color: #fff;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 3px;
+   cursor: pointer;
+    margin-left: 20px;
+   margin-top: 15px;
+   width: 300px;
+   font-size: 15px;
+
+ }
+
+.search-bar{
+     margin-top: -400px;
+     margin-left: 280px;
+     background: #fff;
+     width: 35%;
+     height: 30%;
+     max-width: 800px;
+     display: flex;
+     padding: 2px;
+     border-radius: 4px;
+     position: absolute;
+     border: 2px solid  #f3f7f8;
+ }
+
+.search-bar input{
+    padding: 10px 25px;
+    width: 100%;
+    border: none;
+    outline:none;
+    font-size: 18px;
+}
+
+
+.comentario .Enviar{
+    margin-top: -210px;
+    margin-left: 310px;
+    width: 30%;
+    text-align: center;
+    position: absolute;
+    color: #fff;
+    font-size: 20px;
+    background:#FF5500;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+
+
+
+  
+
+/*termino */
+  .info {
+      padding: 20px;
+      display: flex;
+      gap: 150px;
+      border: 1px solid white;
+  }
+  .info h1{
+      padding-top: 15px;
+      font-size: 18px;
+  }
+  .info a{
+      font-size: 12px;
+      color: black;
+  }
+  .final{
+    margin-top: 50px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    display: flex;
+    gap: 252px;
+    background: #f3f7f8;
+  }
+
+  .final div a{
+      margin-left: 20px;
+      font-size: 13px;
+      color: black;
+  }
+  .final div{
+      margin-top: 50px;
+      
+  }
+ 
+div .logo {
+    position: absolute;
+    width: 80px;
+    margin: 10px;
+    margin-left: 20px;
+    margin-top: 80px;
+  }
+
+  .final h1{
+    margin-left: 20px;
+    padding-top: 20px;
+    font-size: 18px;
+  }
+  .final .Siga-nos .social{
+      display: flex;
+  }
+
+  .final .Siga-nos i{
+      width: 50px;
+      height: 50px;
+    margin-top: -10;
+  }
+
+

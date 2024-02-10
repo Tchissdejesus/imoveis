@@ -1,0 +1,71 @@
+<span style="font-family: verdana, geneva, sans-serif;"><!DOCTYPE html>
+    <html lang="pt">
+    <head>
+      <meta charset="UTF-8" />
+      <title>Casa eficiente </title>
+      <link rel="stylesheet" href="cadastro.css" />
+      <!-- Font Awesome Cdn Link -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    </head>
+    <body>
+        <div class="container">
+
+            <div class = "logo">
+                <img src="IMG/logo.png"> 
+            </div>
+           
+
+            <div class="search-bar">
+                <div id="select">
+                    <p id="selectText">Tipo de usuário</p>
+                    <i class="fas fa-arrow-down"></i>
+                    <ul id="list">
+                        <li class="options">Cliente</li>
+                        <li class="options">Corretor</li>
+                        <li class="options">Equipa de manutenção</li>
+                    </ul>
+                </div>
+        </div>
+            <div class="loginForm">
+                <a href="index.html" class="voltar">     
+                    <i class="fas fa-arrow-left"></i>
+                    Anterior</a>
+                <h2 class="loginMsg1"> ¡Olá!</h2>
+            <p class="loginMsg2">
+                Insira seus dados para criar seu perfil
+            </p>
+    
+                <div class="form">
+                   <span class="nome">Nome</span>     
+                   <input type="text" name="name" id="username" placeholder="Nome">
+
+                   <span class="email">Email</span>     
+                   <input type="text" name="email" id="email" placeholder="Email">
+
+                   <span class="tele">Telefone</span>     
+                   <input type="text" name="namr" id="telefone" placeholder="Telefone">
+
+                    <span class="palavraPasse">Palavra-passe</span>
+                    <input type="password" id="password" name="password" placeholder="password">
+
+                    <a href="#"><p>Ao me registrar, aceito os <br>
+                        Termos e condições e política de privacidade</p></a>
+    
+                    <button type="submit" id="Entrar" class="Criarconta"  onclick="save()">Entrar</button> 
+                </div>    
+    
+            </div>
+        </div>
+   
+     <!--todo html que sera conectado com o firebase deve ter
+         essas 3 funções do firebase e a chamada da classe javascript
+    -->
+     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+ 
+     <script src="index.js"></script>
+
+    </body>
+    </html>
+</span>

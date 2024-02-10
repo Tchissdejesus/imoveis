@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.container{
+    margin-left: -350px;
+    margin-top: 600px;
+    padding: 10px;
+    position: relative;
+}
+
+.container .logo {
+   position: absolute;
+   margin-left: 800px;
+   margin-top: -570px;
+}
+.container .logo img {
+   width: 20%; /* Define o tamanho desejado da imagem */
+   height: 25%;
+   
+}
+.loginForm {
+    margin-top: 40px;
+    position: absolute;
+}
+
+.loginMsg1 {
+   margin-bottom: 15px;
+   margin-left: 800px;
+   margin-top: -540px;
+  color: black;
+  padding-top: 20px;
+
+ font-size: 28px;
+ font-style: normal;
+ font-weight: 700;
+ line-height: normal;
+ }
+ 
+ .form {
+   margin-top: 100px;
+   margin-left: 800px;
+   padding-bottom: 20px; 
+ }
+ .loginForm .voltar{
+    margin-top: -550px;
+    margin-left: 800px;
+    position: absolute;
+    font-size: 15px;
+    color: #999;
+ }
+
+ .form p{
+    color: black;
+    font-size: 13px;
+    margin-left: 20px;
+    text-align: center;
+    text-decoration: underline;
+  }
+
+ .form span {
+   display: block;
+   margin-bottom: 5px;
+ }
+ 
+ .form input {
+   display: flex;
+   width: 100%;
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 3px;
+   margin-bottom: 10px;
+   box-sizing: border-box; /* Incluir bordas no cálculo da largura */
+ }
+ 
+ .form button {
+   background-color:  #FF5500; /* Cor azul padrão */
+   color: #fff;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 3px;
+   cursor: pointer;
+    margin-left: 20px;
+   margin-top: 15px;
+   width: 300px;
+   font-size: 15px;
+ }
+ 
+ .form button:hover {
+   background-color: #FF5500; /* Cor mais escura no hover */
+ }
+ 
+ /* Estilos específicos para elementos */
+ .loginMsg2 {
+   font-size: 14px;
+   color: #999;
+   margin-left: 800px;
+ }
+ 
+ .Criarconta {
+   background-color: #28a745; /* Cor verde para o botão principal */
+ }
+ 
+ .Cancelar { 
+   background-color:#dc3545; /* Cor vermelha para o botão de cancelamento */
+ }
+
+ .search-bar{
+    margin-top: -380px;
+    margin-left: 795px;
+    background:  #fff;
+    width: 20%;
+    height: 0%;
+    max-width: 800px;
+    display: flex;
+    padding: 2px;
+    border-radius: 4px;
+    position: absolute;
+}
+#select i{
+    margin-top: -6px;
+}
+#select{
+    background: #fff;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    color: black;
+    width: 420px;
+    padding: 25px 20px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 4px;
+    border: 1px solid #999;
+}
+#selectText {
+    margin-top: -12px;
+    font-size: 16px;
+}
+
+ #select ul{
+    position: absolute;
+    top: 120%;
+    left: 0;
+    list-style: none;
+    background: #fff;
+    color: #555;
+    width: 100%;
+    border-radius: 4px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    z-index: 1000;
+}
+
+ #select ul li{
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.search-bar input{
+    padding: 10px 25px;
+    height: 50%;
+    width: 100%;
+    border: none;
+    outline:none;
+    font-size: 18px;
+}
+
+ #select ul.open{
+   max-height: 300px;
+}
