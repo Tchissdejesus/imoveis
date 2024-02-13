@@ -1,0 +1,94 @@
+<span style="font-family: verdana, geneva, sans-serif;"><!DOCTYPE html>
+    <html lang="pt">
+    <head>
+      <meta charset="UTF-8" />
+      <title>Casa eficiente </title>
+      <link rel="stylesheet" href="Detalhes_Imovel.css" />
+      <!-- Font Awesome Cdn Link -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    </head>
+    <body>
+      <div class="container">
+        <nav>
+          <ul>
+            <li><a href="Adm_actualizar.html" class="logo">
+              <img src="IMG/perfil.jpg">
+              <span class="nav-item">Perfil</span>
+            </a></li>
+            <li><a href="Corrector.html">
+            <i class="fas fa-warehouse"></i>
+              <span class="nav-item">Imóveis</span>
+            </a></li>
+            <li><a href="Corrector_Imovel.html">
+              <i class="fas fa-server"></i>
+              <span class="nav-item">Imóveis Vendidos</span>
+            </a></li>
+             <li><a href="#" class="logout">
+              <i class="fas fa-sign-out-alt"></i>
+              <span class="nav-item">Treminar sessão</span>
+            </a></li>
+          </ul>
+        </nav>
+    
+    
+        <section class="main">
+          <div class="main-top">
+            <h1> Detalhes do Imóvel </h1>
+            <i class="fas fa-user-cog"></i>
+          </div>
+         
+    
+          <section class="section">
+            <div class="slider">
+                <div class="slide">
+                        <input type="radio" name="radio-btn" id="radio1">
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        <input type="radio" name="radio-btn" id="radio4">
+
+                    <div class="st first">
+                        <img src="IMG/site1.jpg" alt="">
+                    </div>
+                    <div class="st">
+                        <img src="IMG/site2.jpg" alt="">
+                    </div>
+                    <div class="st">
+                        <img src="IMG/site3.jpg" alt="">
+                    </div>
+                    <div class="st">
+                        <img src="IMG/site1.jpg" alt="">
+                    </div>
+
+                    <div class="nav-auto">
+                            <div class="a-b1"></div>
+                            <div class="a-b2"></div>
+                            <div class="a-b3"></div>
+                            <div class="a-b4"></div>
+                    </div>
+                </div>
+                <div class="nav-m">
+                    <label for ="radio1" class="m-btn"></label>
+                    <label for ="radio1" class="m-btn"></label>
+                    <label for ="radio1" class="m-btn"></label>
+                    <label for ="radio1" class="m-btn"></label>
+                </div>
+            </div>
+          </section>
+          
+        </section>
+      </div>
+    
+       <script type="text/javascript">
+                var counter=1;
+                setInterval(function(){
+                    document.getElementById('radio' + counter).checked = true; 
+                    counter++;
+                    if(counter>4){
+                        counter = 1;
+                    }
+  },5000);
+       </script>
+       
+    </body>
+    </html>
+    </span>

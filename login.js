@@ -12,6 +12,31 @@ var firebaseConfig = {
   
   var database = firebase.database();
 
+  function listarDados(){
+        var user_ref = database.ref('users')
+        user_ref.on('value', function(snapshot) {
+        //var data = snapshot.val()
+        //console.log(data['email'])
+         snapshot.forEach(function (childSnapshot) {
+          var value = childSnapshot.val()
+          console.log(value.email);
+          });
+        })
+  }
+
+function tipoUsuario(emailUser){
+  let tp = ""
+    var user_ref = database.ref('users')
+    user_ref.on('value', function(snapshot) {
+    snapshot.forEach(function (childSnapshot) {
+      var value = childSnapshot.val()
+      if(value.email === emailUser)
+        tp = value.tipo_de_acesso
+      });
+    })
+    return tp
+}
+
 function login(){
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
@@ -21,8 +46,22 @@ function login(){
         // Login bem-sucedido
         var user = userCredential.user;
         console.log("Usuário autenticado:", user);
-        alert('Login bem-sucedido!');
+        //alert('Login bem-sucedido!');
         // Redirecionar ou fazer algo após o login
+        
+      //Codigo de verificacao de tipo de usuario
+      let tU = tipoUsuario(email) 
+      console.log(tU)
+
+      if(tU === "Corretor")
+        window.location.href = "login.html"
+      else if(tU === "Cliente")
+        window.location.href = "index.html"
+      else if(tU === "Equipa de manutenção")
+        window.location.href = "login.html"
+      else if(tU === "Admin")
+        window.location.href = "Adm.html"
+
     })
     .catch((error) => {
         // Lidar com erros durante o login
@@ -33,6 +72,8 @@ function login(){
     });
 
 }
+
+
 
 
 

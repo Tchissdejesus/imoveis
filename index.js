@@ -53,15 +53,18 @@ var firebaseConfig = {
                 email: email,
                 username: username,
                 telefone: telefone,
-                tipo_de_acesso: selectedOptionText
+                tipo_de_acesso: selectedOptionText,
+                password: password
+
             };
 
             // Salvar dados do usuário no banco de dados do Firebase Realtime Database
             firebase.database().ref('users/' + user.uid).set(userData)
                 .then(() => {
                     // Dados do usuário salvos com sucesso no banco de dados
-                    console.log("Dados do usuário salvos com sucesso no banco de dados");
-                    alert('Usuário cadastrado com sucesso!');
+                    console.log("Dados do usuário salvos com sucesso no banco de dados")
+                    alert('Usuário cadastrado com sucesso!')
+                    window.location.href = "login.html"
                 })
                 .catch((error) => {
                     console.error("Erro ao salvar os dados do usuário no banco de dados:", error);
@@ -85,7 +88,7 @@ function login(){
     .then((userCredential) => {
         // Login bem-sucedido
         var user = userCredential.user;
-        console.log("Usuário autenticado:", user);
+        //console.log("Usuário autenticado:", user);
         alert('Login bem-sucedido!');
         // Redirecionar ou fazer algo após o login
     })
@@ -93,7 +96,7 @@ function login(){
         // Lidar com erros durante o login
         var errorCode = error.code;
         var errorMessage = error.message;
-        console.error("Erro durante o login:", errorMessage);
+        //console.error("Erro durante o login:", errorMessage);
         alert('Erro durante o login: ' + errorMessage);
     });
 

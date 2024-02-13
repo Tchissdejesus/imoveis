@@ -216,21 +216,3 @@ td{
 th{
   text-align: center;
 }
-.cadastrar{
-  width: 15%;
-  margin-top: 8px;
-  padding: 7px;
-  cursor: pointer;
-  border-radius: 10px;
-  background-color: white;
-  border: 1px solid #3568A0;
-  text-align: center;  
-  text-decoration: none;
-
-    
-}
-.cadastrar:hover{
-  background: #3568A0;
-  color: #fff;
-  transition: 0.5rem;
-}
