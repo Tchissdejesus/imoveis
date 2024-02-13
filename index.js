@@ -1,3 +1,14 @@
+var firebaseConfig = {
+    apiKey: "AIzaSyD559_itPgxedj7_HrxxcbTRm_ZIHBSry4",
+    authDomain: "imoveis-2b74d.firebaseapp.com",
+    projectId: "imoveis-2b74d",
+    storageBucket: "imoveis-2b74d.appspot.com",
+    messagingSenderId: "935647253208",
+    appId: "1:935647253208:web:5f7c2cb259dcd9e4f43dad"
+};
+
+  firebase.initializeApp(firebaseConfig);
+  var database = firebase.database();
 
 //classe para o cadastro
 
@@ -21,19 +32,6 @@ for(options of options){
     }
 }
   
-var firebaseConfig = {
-    apiKey: "AIzaSyD559_itPgxedj7_HrxxcbTRm_ZIHBSry4",
-    authDomain: "imoveis-2b74d.firebaseapp.com",
-    projectId: "imoveis-2b74d",
-    storageBucket: "imoveis-2b74d.appspot.com",
-    messagingSenderId: "935647253208",
-    appId: "1:935647253208:web:5f7c2cb259dcd9e4f43dad"
-};
-  //inicializar o firebase 
-  firebase.initializeApp(firebaseConfig);
-  
-  var database = firebase.database();
-
  
   function save(){
   
@@ -101,7 +99,6 @@ function login(){
 
 }
 
-
 function get(){}
 
 function update(){}
@@ -116,8 +113,8 @@ function saveData(){
     let ano = document.getElementById('ano').value;
     let preco = document.getElementById('preco').value;
     let topologia = document.getElementById('topologia').value;
-    let descricao = "";
-    let corrector = "" 
+    let descricao = ""
+    let emailUser = sessionStorage.getItem("emailUser");
 
             var imovelData = {
                 id: id,
@@ -127,12 +124,12 @@ function saveData(){
                 preco: preco,
                 descricao: descricao,
                 topologia: topologia,
-                corretor: emailCorretor
+                corretor: emailUser
             };
 
             firebase.database().ref('imoveis/'+id).set(imovelData).then(() => {
                 console.log("Dados do imovel salvos com sucesso no banco de dados")
-                var emailUser = sessionStorage.getItem("emailUser");
+                
                 console.log(emailUser);
                 alert('Imovel salvo com sucesso!')
                 window.location.href = "Corrector.html"
@@ -142,6 +139,19 @@ function saveData(){
                 alert('Erro ao salvar os dados do usuário no banco de dados: ' + error.message);
             });
 
+}
+
+function listImoveis(){
+    console.log("Entrou!!")
+    var imoveis = database.ref('imoveis')
+    imoveis.on('value', function(snapshot) {
+    var value = snapshot.val()
+    console.log(value)
+    snapshot.forEach(function (childSnapshot) {
+      //var value = childSnapshot.val()
+      //console.log(value.email)
+      });
+    })
 }
 
 
