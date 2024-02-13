@@ -1,5 +1,3 @@
-
-
 //classe para login
 var firebaseConfig = {
     apiKey: "AIzaSyD559_itPgxedj7_HrxxcbTRm_ZIHBSry4",
