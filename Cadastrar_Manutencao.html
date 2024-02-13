@@ -1,62 +1,64 @@
 <span style="font-family: verdana, geneva, sans-serif;"><!DOCTYPE html>
-    <html lang="pt">
+  <html lang="pt">
     <head>
       <meta charset="UTF-8" />
-      <title>Casa eficiente </title>
+      <title>Casa eficiente</title>
       <link rel="stylesheet" href="Cadastrar_Manutencao.css" />
       <!-- Font Awesome Cdn Link -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
-      
     </head>
     <body>
       <div class="container">
         <nav>
-            <ul>
-              <li><a href="#" class="logo">
+          <ul>
+            <li>
+              <a href="#" class="logo">
                 <img src="IMG/perfil.jpg">
                 <span class="nav-item">Equipa</span>
-              </a></li>
-             
-              <li><a href="manutencao.html">
+              </a>
+            </li>
+            <li>
+              <a href="manutencao.html">
                 <i class="fas fa-server"></i>
                 <span class="nav-item">Manutenção</span>
-              </a></li>
-               <li><a href="#" class="logout">
+              </a>
+            </li>
+            <li>
+              <a href="#" class="logout">
                 <i class="fas fa-sign-out-alt"></i>
-                <span class="nav-item">Treminar sessão</span>
-              </a></li>
-            </ul>
-          </nav>
+                <span class="nav-item">Terminar sessão</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
         
         <div class="container1">
-            <form class="admin-form">
-                <h2>Cadastro da Manutenção</h2>
+          <form class="admin-form">
+            <h2>Cadastro da Manutenção</h2>
     
-                <label for="nome">Id imóvel</label>
-                <input type="text" id="nome" name="" placeholder="Imóvel" required>
+            <label for="id">Id imóvel</label>
+            <input type="text" id="id" name="id" placeholder="Imóvel" required>
     
-                <label for="email">Tipo</label>
-                <input type="text" id="" name=""  placeholder="Residencial/Comercial" required>
+            <label for="tipo">Tipo</label>
+            <input type="text" id="tipo" name="tipo" placeholder="Residencial/Comercial" required>
     
-                <label for="senha">Localização</label>
-                <input type="text" id="" name="" placeholder="Bairro" required>
-
-                <label for="senha">Preço</label>
-                <input type="text" id="" name="" placeholder="valor" required>
-
-                <label for="senha">Descrisão do problema </label>
-                <input type="text" id="" name="" placeholder="resume o problema" required>
+            <label for="localizacao">Localização</label>
+            <input type="text" id="localizacao" name="localizacao" placeholder="Bairro" required>
     
-                <button type="submit">Cadastrar</button>
-            </form>
+            <label for="Preco">Preço</label>
+            <input type="text" id="Preco" name="Preco" placeholder="Valor" required>
+    
+            <label for="descricao">Descrição do problema</label>
+            <input type="text" id="descricao" name="descricao" placeholder="Resumo do problema" required>
+    
+            <button type="button" onclick="saveData()">Cadastrar</button>
+          </form>
         </div>
-        
-
-
-
-
-
       </div>
+    
+      <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+      <script src="cadastrar_manutecao.js"></script>
     </body>
     </html>
-    </span>
