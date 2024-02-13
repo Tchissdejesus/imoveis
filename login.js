@@ -1,4 +1,6 @@
-  //classe para ligin
+
+
+//classe para login
 var firebaseConfig = {
     apiKey: "AIzaSyD559_itPgxedj7_HrxxcbTRm_ZIHBSry4",
     authDomain: "imoveis-2b74d.firebaseapp.com",
@@ -51,14 +53,17 @@ function login(){
         
       //Codigo de verificacao de tipo de usuario
       let tU = tipoUsuario(email) 
-      console.log(tU)
+      
+      sessionStorage.setItem("emailUser", email);
 
-      if(tU === "Corretor")
-        window.location.href = "login.html"
+
+      if(tU === "Corretor") {
+        window.location.href = "Corrector.html"
+      }  
       else if(tU === "Cliente")
         window.location.href = "index.html"
       else if(tU === "Equipa de manutenção")
-        window.location.href = "login.html"
+        window.location.href = "manutencao.html"
       else if(tU === "Admin")
         window.location.href = "Adm.html"
 
@@ -72,6 +77,8 @@ function login(){
     });
 
 }
+
+
 
 
 

@@ -79,7 +79,6 @@ var firebaseConfig = {
         });
 }
 
-
 function login(){
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
@@ -108,5 +107,41 @@ function get(){}
 function update(){}
 
 function remove(){}
+
+function saveData(){
+    console.log("Entrou!!!")
+    let id = document.getElementById('id').value;
+    let tipo = document.getElementById('tipo').value;
+    let localizacao = document.getElementById('localizacao').value;
+    let ano = document.getElementById('ano').value;
+    let preco = document.getElementById('preco').value;
+    let topologia = document.getElementById('topologia').value;
+    let descricao = "";
+    let corrector = "" 
+
+            var imovelData = {
+                id: id,
+                tipo: tipo,
+                localizacao: localizacao,
+                ano: ano,
+                preco: preco,
+                descricao: descricao,
+                topologia: topologia,
+                corretor: emailCorretor
+            };
+
+            firebase.database().ref('imoveis/'+id).set(imovelData).then(() => {
+                console.log("Dados do imovel salvos com sucesso no banco de dados")
+                var emailUser = sessionStorage.getItem("emailUser");
+                console.log(emailUser);
+                alert('Imovel salvo com sucesso!')
+                window.location.href = "Corrector.html"
+            })
+            .catch((error) => {
+                console.error("Erro ao salvar os dados do usuário no banco de dados:", error);
+                alert('Erro ao salvar os dados do usuário no banco de dados: ' + error.message);
+            });
+
+}
 
 

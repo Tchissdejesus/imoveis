@@ -1,0 +1,65 @@
+<span style="font-family: verdana, geneva, sans-serif;"><!DOCTYPE html>
+    <html lang="pt">
+    <head>
+      <meta charset="UTF-8" />
+      <title>Casa eficiente - Cadastro do imóvel </title>
+      <link rel="stylesheet" href="cadastro_imovel.css" />
+      <!-- Font Awesome Cdn Link -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+      
+    </head>
+    <body>
+      <div class="container">
+        <nav>
+            <ul>
+              <li><a href="#" class="logo">
+                <img src="IMG/perfil.jpg">
+                <span class="nav-item">Usuario</span>
+              </a></li>
+             
+               <li><a href="#" class="logout">
+                <i class="fas fa-sign-out-alt"></i>
+                <span class="nav-item">Treminar sessão</span>
+              </a></li>
+            </ul>
+          </nav>
+        
+        <div class="container1">
+            <form class="admin-form">
+                <h2>Cadastro do Imóvel</h2>
+    
+                <label>Id imóvel</label>
+                <input type="number" id="id" name="" placeholder="Imóvel" required>
+    
+                <label>Tipo</label>
+                <input type="text" id="tipo" name=""  placeholder="Residencial/Comercial" required>
+
+                <label>Topologia</label>
+                <input type="text" id="topologia" name=""  placeholder="T#" required>
+
+                <label>Localização</label>
+                <input type="text" id="localizacao" name="" placeholder="Bairro" required>
+
+                <label>Ano de construção</label>
+                <input type="text" id="ano" name="" placeholder="YYYY" required>
+
+                <label>Preço</label>
+                <input type="text" id="preco" name="" placeholder="000.00" required>
+
+                <label>Descrição da casa </label>
+                <input type="text" id="descricao" name="" placeholder="Descrição da casa" required>
+
+                <button class="btn-enviar" name="btn-submit" onclick="saveData()">Salvar</button>
+                <a class="btn-cancelar " href="Corrector.html">Cancelar</a>
+            </form>   
+        </div>
+      </div>
+      
+      <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+      <script src="index.js"></script>
+
+    </body>
+    </html>
+    </span>
