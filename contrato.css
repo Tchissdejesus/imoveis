@@ -1,0 +1,63 @@
+body {
+	font-family:"Open Sans", Helvetica, Arial, sans-serif;
+	font-weight:300;
+	font-size: 12px;
+	line-height:30px;
+	color:#777;
+	background:#edf0f4;
+}
+
+.container {
+	max-width:700px;
+	width:100%;
+	margin:0 auto;
+	position:relative;
+}
+
+#contact {
+	background:#F9F9F9;
+	padding:25px;
+	margin:50px 0;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.side-by-side {
+    flex: 1;
+}
+
+.accept button {
+    height: 47px;
+    border-radius: 37px;
+    background-color: rgb(3, 130, 249);
+    border: 0;
+    display: block;
+    font-size: 16px;
+    margin: 0 auto;
+    max-width: 300px;
+    outline: none !important;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+.accept button:hover {
+    background-color: rgb(65, 65, 244);
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Additional styles for visited links (optional) */
+a:visited {
+    color: white;
+}
+
+/* Additional styles for hover effect (optional) */
+a:hover {
+    color: white;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PAGAMENTO</title>
+    <link rel="stylesheet" type="text/css" href="pagamento.css">
+    <script type="text/javascript" src="pagamento.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <button type="button" class="btn btn-primary launch" data-toggle="modal" data-target="#staticBackdrop"> <i
+            class="fa fa-rocket"></i> Pagar Agora
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="text-right"> <i class="fa fa-close close" data-dismiss="modal"></i> </div>
+                    <div class="tabs mt-3">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation"> <a class="nav-link active" id="visa-tab"
+                                    data-toggle="tab" href="#visa" role="tab" aria-controls="visa" aria-selected="true">
+                                    <img src="https://i.imgur.com/sB4jftM.png" width="80"> </a> </li>
+                            <li class="nav-item" role="presentation"> <a class="nav-link" id="paypal-tab"
+                                    data-toggle="tab" href="#paypal" role="tab" aria-controls="paypal"
+                                    aria-selected="false"> <img src="https://i.imgur.com/yK7EDD1.png" width="80"> </a>
+                            </li>
+                            <li class="nav-item" role="presentation"> <a class="nav-link" id="ref-tab" data-toggle="tab"
+                                    href="#ref" role="tab" aria-controls="ref" aria-selected="false"> <img
+                                        src="https://logowik.com/content/uploads/images/secure-payment2785.jpg"
+                                        width="80"> </a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="visa" role="tabpanel" aria-labelledby="visa-tab">
+                                <div class="mt-4 mx-4">
+                                    <div class="text-center">
+                                        <h5>Cartão de Crédito</h5>
+                                    </div>
+                                    <div class="form mt-3">
+                                        <div class="inputbox"> <input type="text" name="name" class="form-control"
+                                                required="required"> <span>Nome do Titular</span> </div>
+                                        <div class="inputbox"> <input type="text" name="name" min="1" max="999"
+                                                class="form-control" required="required"> <span>Número do Cartão</span>
+                                            <i class="fa fa-eye"></i> </div>
+                                        <div class="d-flex flex-row">
+                                            <div class="inputbox"> <input type="text" name="name" min="1" max="999"
+                                                    class="form-control" required="required"><span>Data de Validade (MM/YY)</span></div>
+                                            <div class="inputbox"> <input type="text" name="name" min="1" max="999"
+                                                    class="form-control" required="required"> <span>CVV</span> </div>
+                                        </div>
+                                        <div class="pay px-5"> <button class="btn btn-primary btn-block">Pagar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="paypal" role="tabpanel" aria-labelledby="paypal-tab">
+                                <div class="mt-4 mx-4">
+                                    <div class="text-center">
+                                        <h5>Informação da Conta</h5>
+                                    </div>
+                                    <div class="inputbox"> <input type="text" name="name" class="form-control"
+                                            required="required"> <span>Email do Paypal</span> </div>
+                                    <div class="inputbox"> <input type="password" name="pass" class="form-control"
+                                            required="required"> <span>Palavra-passe do Paypal</span> </div>
+                                    <div class="pay px-5"> <button class="btn btn-primary btn-block">Pagar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="ref" role="tabpanel" aria-labelledby="ref-tab">
+                                <div class="mt-4 mx-4">
+                                    <div class="text-center">
+                                        <h5>Pagamento por Referência</h5></br>
+                                    </div>
+                                    <h6>Entidade:</h6>
+                                    <center>10736</center>
+                                    <h6>Referência:</h6>
+                                    <center>
+                                        <p id="numeroAleatorio"></p>
+                                    </center>
+                                    <script>
+                                        let numeroGerado = gerarNumeroAleatorio(1000000, 9999999);
+                                        document.getElementById("numeroAleatorio").innerText = numeroGerado;
+                                    </script></br>
+                                    <div class="pay px-5"> <button class="btn btn-primary btn-block" >Pagar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
