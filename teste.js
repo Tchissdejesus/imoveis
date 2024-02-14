@@ -58,12 +58,21 @@ function listImoveis_home() {
                 var imgButton = document.createElement('button');
                 imgButton.textContent = 'Ver'; // Texto do botão
                 imgButton.style.cursor = 'pointer'; // Altera o cursor para indicar que é clicável
-
+                /*
                 // Adiciona um evento de clique ao botão para redirecionar para outra página
                 imgButton.addEventListener('click', function(){
                     // Crie uma string com o URL da outra página,
                     // substituindo "cadaCasa.html" pelo URL desejado
                     window.location.href = "cadaCasa.html"; 
+                });*/
+            
+                imgButton.addEventListener('click', function(){
+                    // Obtém o ID do imóvel associado ao botão clicado
+                    var imovelId = imovel.id; // Assume-se que 'id' é o nome da propriedade que contém o ID do imóvel
+                    // Crie a URL da página de detalhes do imóvel, incluindo o ID como parâmetro
+                    var detalhesUrl = "cadaCasa.html?id=" + imovelId;
+                    // Redireciona para a página de detalhes do imóvel
+                    window.location.href = detalhesUrl; 
                 });
 
                 var img = document.createElement('img');

@@ -7,7 +7,7 @@
       <!-- Font Awesome Cdn Link -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
     </head>
-    <body>
+    <body onload="loadImovelInfo()">
         <header>
             <nav class="navegation">
               <a href="index.html"><img
@@ -34,11 +34,14 @@
 
           <div class="descricao">
             <div class="desc_simples">
-                <p class="p1">Apartamento · 137m² · 2 Quartos · 2 Vagas</p>
-                <p class="p2">Aluguel R$ 7.500</p>
-                <p class="p3">Avenida Manoel Ribas 4716, Santa Maria, Luanda</p>
+                <p id="quartos"class="p1"> Quartos</p>
+                <p id="salas"> salas</p>
+                <p id="cozinhas"> cozinhas</p>
+                <p id="preco">Preço</p>
+                <p id="tipo" class="p2">Aluguel R$ 7.500</p>
+                <p id="localizacao" class="p3">Avenida Manoel Ribas 4716, Santa Maria, Luanda</p>
             </div>
-            <p class="descricao_casa">
+            <p id="descricao" class="descricao_casa">
                 Vista linda, cobertura totalmente mobiliada.
                 Com uma vista que vai deixar os seus dias mais leve e tranquilo. 
                 Essa cobertura está disponível para locação. Excelente localização e
@@ -112,30 +115,12 @@
                         <i class="fab fa-youtube"></i>
                     </div>
                   </div>
-              </section>
-
-    <script>
-        let select = document.getElementById("select");
-        let list = document.getElementById("list");
-
-        let selectText = document.getElementById("selectText");
-        let options = document.getElementsByClassName("options");
-
-
-
-        
-        select.onclick = function(){
-            list.classList.toggle("open");
-        }
-
-        for(options of options){
-            options.onclick = function(){
-                selectText.innerHTML = this.innerHTML;
-               
-            }
-        }
-
-    </script>      
+              </section> 
+              
+              <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+      <script src="cadaCasa.js"></script>
     </body>
     </html>
 </span>
