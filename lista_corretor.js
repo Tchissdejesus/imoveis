@@ -53,3 +53,19 @@ function listImoveis() {
         }
     });
 }
+
+window.onload = function() {
+    listImoveis();
+};
+
+function eliminarImovel(imovelId) {
+    if (confirm('Tem certeza que deseja eliminar este imóvel?')) {
+        var imovelRef = firebase.database().ref('imoveis/' + imovelId);
+        imovelRef.remove().then(function() {
+            console.log('Imóvel eliminado com sucesso!');
+            listImoveis(); // Atualiza a lista de imóveis após a eliminação
+        }).catch(function(error) {
+            console.error('Erro ao eliminar o imóvel:', error);
+        });
+    }
+}

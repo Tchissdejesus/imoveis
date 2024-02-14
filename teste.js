@@ -7,7 +7,6 @@ var firebaseConfig = {
     messagingSenderId: "935647253208",
     appId: "1:935647253208:web:5f7c2cb259dcd9e4f43dad"
 };
-
   firebase.initializeApp(firebaseConfig); 
   var database = firebase.database();
 
@@ -56,21 +55,25 @@ function listImoveis_home() {
                 cardDiv.style.padding = '10px';
                 cardDiv.style.boxShadow = '0 20px 35px rgba(0, 0, 0, 0.1)';
                 
-                var imgLink = document.createElement('a');
-                imgLink.href = "cadaCasa.html";
-                
-                // Adiciona um evento de clique ao link
-                imgLink.addEventListener('click', function() {
-                    window.location.href = imgLink.href; // Redireciona para o href do link ao clicar
+                var imgButton = document.createElement('button');
+                imgButton.textContent = 'Ver'; // Texto do botão
+                imgButton.style.cursor = 'pointer'; // Altera o cursor para indicar que é clicável
+
+                // Adiciona um evento de clique ao botão para redirecionar para outra página
+                imgButton.addEventListener('click', function(){
+                    // Crie uma string com o URL da outra página,
+                    // substituindo "cadaCasa.html" pelo URL desejado
+                    window.location.href = "cadaCasa.html"; 
                 });
-                
+
                 var img = document.createElement('img');
                 img.src = "IMG/site1.jpg";
                 img.style.width = '100%';
                 img.style.height = '200px';
                 
-                imgLink.appendChild(img); // Adiciona a imagem ao link
-
+                cardDiv.appendChild(imgButton); // Adiciona o botão à div do cartão
+                cardDiv.appendChild(img);
+                
                 var h4 = document.createElement('h4');
                 h4.textContent = imovel.localizacao;
 
@@ -116,8 +119,6 @@ function listImoveis_home() {
 
                 perDiv.appendChild(table);
 
-                cardDiv.appendChild(imgLink);
-                cardDiv.appendChild(img);
                 cardDiv.appendChild(h4);
                 cardDiv.appendChild(p1);
                 cardDiv.appendChild(p2);
@@ -133,3 +134,4 @@ function listImoveis_home() {
 window.onload = function() {
     listImoveis_home();
 };
+
