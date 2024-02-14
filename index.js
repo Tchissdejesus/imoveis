@@ -154,4 +154,16 @@ function listImoveis(){
     })
 }
 
+function verification() {
+    var emailInfo = sessionStorage.getItem("emailUser");
+    if(emailInfo != null) {
+        window.location.href = "contrato.html"
+    }
+    window.location.href = "login.html"    
+}
+
+function limparUserInfo() {
+    sessionStorage.clear()
+}
+
 

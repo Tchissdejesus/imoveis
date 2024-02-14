@@ -37,7 +37,12 @@ function tipoUsuario(emailUser){
     return tp
 }
 
+function limparUserInfo() {
+  sessionStorage.clear()
+}
+
 function login(){
+
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
     

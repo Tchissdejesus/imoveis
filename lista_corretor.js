@@ -29,22 +29,8 @@ function listImoveis() {
                     <td>${imovel.localizacao}</td>
                     <td>${imovel.preco}</td>
                     <td>${imovel.descricao}</td>
-                    <td>
-                        <button class="redirect-button" onclick="redirectToPage2()">Detalhes</button>
-                        <script>
-                            function redirectToPage2(){
-                                window.location.href="Detalhes_Imovel.html?id=${imovel.id}";
-                            }
-                        </script>
-                    </td>
-                    <td>
-                        <button class="redirect-button" onclick="redirectToPage1()">Actualizar</button>
-                        <script>
-                            function redirectToPage1(){
-                                window.location.href="Adm_detalhes_casa.html?id=${imovel.id}";
-                            }
-                        </script>
-                    </td>
+                    
+                   
                     <td>
                         <button class="redirect-button" onclick="eliminarImovel('${key}')">Eliminar</button>
                     </td>
