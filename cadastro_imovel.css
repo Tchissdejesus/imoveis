@@ -101,6 +101,7 @@ nav .fas{
   top: 20px;
   font-size: 20px;
   text-align: center;
+ 
 }
 .nav-item{
   position: relative;
@@ -117,7 +118,7 @@ a:hover i{
 /*  FORMULARIO */
 
 .container1{
-  margin-top: 250px;
+  margin-top: 350px;
     display: flex;
     justify-content: center;
     align-items: center;

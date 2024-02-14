@@ -11,39 +11,42 @@ var firebaseConfig = {
   firebase.initializeApp(firebaseConfig); 
   var database = firebase.database();
 
-function saveData(){
-    console.log("Entrou!!!")
+  function saveData(){
+    console.log("Entrou!!!");
+
     let id = document.getElementById('id').value;
     let tipo = document.getElementById('tipo').value;
     let localizacao = document.getElementById('localizacao').value;
     let ano = document.getElementById('ano').value;
     let preco = document.getElementById('preco').value;
     let topologia = document.getElementById('topologia').value;
-    let descricao = ""
+    let quartos = document.getElementById('quartos').value;
+    let salas = document.getElementById('salas').value;
+    let cozinhas = document.getElementById('cozinhas').value;
+    let descricao = document.getElementById('descricao').value;
     let emailUser = sessionStorage.getItem("emailUser");
 
-            var imovelData = {
-                id: id,
-                tipo: tipo,
-                localizacao: localizacao,
-                ano: ano,
-                preco: preco,
-                descricao: descricao,
-                topologia: topologia,
-                corretor: emailUser
-            };
+    var imovelData = {
+        id: id,
+        tipo: tipo,
+        localizacao: localizacao,
+        ano: ano,
+        preco: preco,
+        topologia: topologia,
+        quartos: quartos,
+        salas: salas,
+        cozinhas: cozinhas,
+        descricao: descricao,
+        corretor: emailUser
+    };
 
-            firebase.database().ref('imoveis/'+id).set(imovelData).then(() => {
-                console.log("Dados do imovel salvos com sucesso no banco de dados")
-                
-                console.log(emailUser);
-                alert('Imovel salvo com sucesso!')
-                window.location.href = "Corrector.html"
-            })
-            .catch((error) => {
-                console.error("Erro ao salvar os dados do usuário no banco de dados:", error);
-                alert('Erro ao salvar os dados do usuário no banco de dados: ' + error.message);
-            });
-
+    firebase.database().ref('imoveis/'+id).set(imovelData).then(() => {
+        console.log("Dados do imovel salvos com sucesso no banco de dados");
+        console.log(emailUser);
+        alert('Imóvel salvo com sucesso!');
+        window.location.href = "Corrector.html";
+    }).catch((error) => {
+        console.error("Erro ao salvar os dados do imóvel no banco de dados:", error);
+        alert('Erro ao salvar os dados do imóvel no banco de dados: ' + error.message);
+    });
 }
-
